@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rise Up | Daily Motivation</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101323;
+  color: #f5f5fa;
+  text-align: center;
+  line-height: 1.7;
+}
+header {
+  padding: 22px;
+  border-bottom: 1px solid #343750;
+  font-size: 22px;
+  font-weight: bold;
+}
+header span { color: #a99aff; }
+.hero { padding: 85px 20px; }
+.tag {
+  color: #b8aaff;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+h1 {
+  font-size: clamp(36px, 8vw, 64px);
+  line-height: 1.15;
+  max-width: 800px;
+  margin: 25px auto;
+}
+p { color: #c5c6d6; }
+button {
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 9px;
+  background: #a99aff;
+  color: #171329;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+section { padding: 40px 20px; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 25px auto;
+}
+.card {
+  background: #1b1f34;
+  border: 1px solid #343750;
+  padding: 22px;
+  border-radius: 12px;
+}
+footer {
+  padding: 24px;
+  border-top: 1px solid #343750;
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+<header>RISE <span>UP.</span></header>
+<main>
+<div class="hero">
+  <div class="tag">YOUR JOURNEY STARTS TODAY</div>
+  <h1>Become the person you promised yourself you'd be.</h1>
+  <p>Small steps. Strong discipline. Big dreams. Build your future starting today.</p>
+  <button onclick="newQuote()">Get Motivated</button>
+  <p id="quote">You don't need to be perfect. You need to keep going.</p>
+</div>
+<section>
+  <div class="tag">BUILD YOURSELF</div>
+  <h2>Three Rules for Growth</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>01. Discipline</h3>
+      <p>Show up even when motivation is missing.</p>
+    </div>
+    <div class="card">
+      <h3>02. Consistency</h3>
+      <p>Small efforts become powerful habits.</p>
+    </div>
+    <div class="card">
+      <h3>03. Patience</h3>
+      <p>Give your dreams time and effort.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Keep growing. Keep moving. © 2026 Rise Up</footer>
+<script>
+const quotes = [
+  "You don't need to be perfect. You need to keep going.",
+  "Your habits shape the future you are building.",
+  "Start where you are. Improve one step at a time.",
+  "Let your actions speak louder than your excuses.",
+  "Progress takes patience. Keep showing up."
+];
+let index = 0;
+function newQuote() {
+  document.getElementById("quote").textContent =
+    quotes[index % quotes.length];
+  index++;
+}
+</script>
+</body>
+</html>
